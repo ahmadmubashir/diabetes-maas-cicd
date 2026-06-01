@@ -1,0 +1,6 @@
+D:\Mubashir\myenv\Scripts\Activate.ps1
+
+uvicorn backend.main:app --reload
+
+
+streamlit run frontend/streamlit_app.py
