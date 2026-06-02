@@ -1,4 +1,4 @@
-name: SmartGraphDx CI/CD
+name: Diabetes MaaS CI/CD
 
 on:
   push:
@@ -24,9 +24,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-     # - name: Run Tests
-     #   run: |
-     #     pytest
+      - name: Run Tests
+        run: |
+          pytest
 
       - name: Check Backend Syntax
         run: |
@@ -38,4 +38,4 @@ jobs:
 
       - name: Docker Build Test
         run: |
-          docker build -t smartgraphdx .
+          docker build -t diabetes-maas .

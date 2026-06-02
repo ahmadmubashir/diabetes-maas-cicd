@@ -15,8 +15,10 @@ from backend.main import app
 
 client = TestClient(app)
 
-def test_docs():
+def test_root():
+    response = client.get("/")
+    assert response.status_code == 200
 
-    response = client.get("/docs")
-
+def test_health():
+    response = client.get("/health")
     assert response.status_code == 200
